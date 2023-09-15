@@ -53,16 +53,16 @@ function App() {
     <div className="p-5 w-9/12 flex flex-col m-auto">
       <p className='text-xl font-extrabold mt-5 mb-4'>News Articles</p>
       <div className="flex justify-between mb-5">
-        <div className="flex ">
+        <div className="flex">
           <input type="checkbox" checked={isSelectAll} onChange={handleSelectAll} className='mr-4 hover:cursor-pointer'></input>
           <div className='mr-3 h-8 items-center drop-shadow-md justify-center flex bg-cyan-50 text-cyan-500 font-semibold border-cyan-400 border rounded-md w-20 text-center hover:bg-cyan-100 hover:cursor-pointer'>Publish</div>
           <div onClick={deleteSelected} className='h-8 items-center drop-shadow-md justify-center flex bg-red-50 text-red-500 font-semibold border-red-500 border rounded-md w-20 text-center hover:bg-red-200 hover:cursor-pointer'>Delete</div>
         </div>
-        <div className="header-right">
+        <div>
           <input className='border drop-shadow-md w-72 h-9 text-gray-400 p-4 text-sm rounded-md' placeholder="Search ..." type="text"></input>
         </div>
       </div>
-      <div className="news-list">
+      <div>
         {
           newsList.map((news,index) => {
             return(

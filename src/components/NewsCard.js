@@ -27,35 +27,35 @@ export default function NewsCard({news,index}) {
             <Modal className="fixed w-4/12 z-50 top-44 left-1/4 ml-40 p-9 bg-white rounded-md" show={isOpen} onHide={handleClose} renderBackdrop={renderBackdrop}>
                 <NewsModal news={news} key={news.id} close={() => setOpen(false)} />
             </Modal>
-            <div className="news-card bg-gray-100 rounded-md flex justify-between p-3.5 mb-3 border border-gray-200 overflow-x-hidden">
-                <div className="news-card-left flex max-w-4xl">
+            <div className="bg-gray-100 rounded-md flex justify-between p-3.5 mb-3 border border-gray-200 overflow-x-hidden">
+                <div className="flex max-w-4xl">
                     <div className='flex items-start mr-3'>
                         <PiDotsSixVerticalBold className='mr-2 text-2xl' />
                         <input type="checkbox" checked={ selectedNews.includes(news.id) } onChange={checkboxHandler} className='mt-2 hover:cursor-pointer'></input>
                     </div>
                     <div>
-                        <p className="news-card-title text-lg font-extrabold ">{news.title}</p>
-                        <div className="news-card-left-details flex">
-                            <div className="news-card-author flex mr-3">
+                        <p className="text-lg font-extrabold ">{news.title}</p>
+                        <div className="flex">
+                            <div className="flex mr-3">
                                 <BsPersonCircle className='text-green-500 mr-3 text-lg' />
                                 <p className='font-extrabold text-gray-500'>{news.author}</p>
                             </div>
-                            <div className="news-card-date flex mr-3">
+                            <div className="flex mr-3">
                                 < RiCalendar2Fill className='text-green-500 mr-3 text-lg' />
                                 <p className='font-extrabold text-gray-500'>{news.date}</p>
                             </div>
                         </div>
-                        <div className="news-card-left-description flex">
+                        <div className="flex">
                             <p className='text-gray-500 mr-3 w-1/12 whitespace-nowrap text-ellipsis overflow-hidden'>{news.content}</p>
-                            <div className="news-card-read flex text-blue-600 hover:cursor-pointer hover:text-blue-400" onClick={()=>setOpen(true)}>
+                            <div className="flex text-blue-600 hover:cursor-pointer hover:text-blue-400" onClick={()=>setOpen(true)}>
                                 <AiFillEye className='mr-1 text-xl' />
                                 <p>Read Full </p>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="news-card-right mr-4">
-                    <div className="news-card-right-tags flex">
+                <div className="mr-4">
+                    <div className="flex">
                         <div className="tag drop-shadow-md h-8 items-center justify-center flex bg-green-50 text-green-500 font-bold border-green-500 border rounded-md p-2 mr-3">#Sports</div>
                         <div className="tag drop-shadow-md h-8 items-center justify-center flex bg-green-50 text-green-500 font-bold border-green-500 border rounded-md p-2 mr-3">#Worldwide</div>
                         <div className="tag drop-shadow-md h-8 items-center justify-center flex bg-green-50 text-green-500 font-bold border-green-500 border rounded-md p-2">#Local</div>
