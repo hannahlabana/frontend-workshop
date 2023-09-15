@@ -1,5 +1,9 @@
 # LOPHILS INC - IT (OJT) - Frontend Workshop
 
+## To access directly online:
+https://master.d3qq75stx87f67.amplifyapp.com/
+
+## To access on your local computer:
 ### Requirements
 
 This project requires Node.js installed on your computer
@@ -17,6 +21,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-### Alternative
-The application may also be accessed through this link:
-https://master.d3qq75stx87f67.amplifyapp.com/
